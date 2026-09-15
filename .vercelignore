@@ -1,8 +1,12 @@
-__pycache__/
+server.py
+Procfile
+render.yaml
+runtime.txt
+requirements.txt
+__pycache__
 *.pyc
 data/synonyms.txt
 data/sudachi-synonyms.json
 data/wn-data-jpn.tab
 data/posts.json
-
-.vercel
+.python-version
