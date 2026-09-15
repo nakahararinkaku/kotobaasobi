@@ -1,4 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#eef1f3"/>
-  <path d="M3 17c6-4 10 4 13 1s6-5 13-1" fill="none" stroke="#9aa0a6" stroke-width="1.2" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="mist" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#f7f7f5"/>
+      <stop offset="55%" stop-color="#eceeed"/>
+      <stop offset="100%" stop-color="#dfe3e6"/>
+    </radialGradient>
+  </defs>
+  <rect width="32" height="32" fill="url(#mist)"/>
 </svg>
