@@ -1,0 +1,159 @@
+:root {
+  --ink: #6b6b66;
+  --glass: rgba(255, 255, 255, 0.38);
+  --glass-strong: rgba(255, 255, 255, 0.55);
+  --shadow: rgba(80, 90, 100, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #f7f7f4;
+}
+
+body {
+  min-height: 100%;
+  color: var(--ink);
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#abyss {
+  width: 1px;
+  height: 900vh;
+  pointer-events: none;
+}
+
+#field {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#words {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.composer {
+  position: fixed;
+  left: 50%;
+  bottom: 1.4rem;
+  transform: translateX(-50%);
+  width: min(560px, calc(100vw - 2rem));
+  z-index: 3;
+}
+
+.composer-glass {
+  padding: 0.75rem 1.05rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 22px;
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: "Shippori Mincho", serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  min-height: 1.7rem;
+  max-height: 6.8rem;
+  letter-spacing: 0.04em;
+}
+
+textarea::placeholder {
+  color: rgba(140, 140, 135, 0.5);
+}
+
+.chip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: #9a9a96;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55);
+  user-select: none;
+  contain: layout style;
+}
+
+.chip.is-word {
+  font-size: 1.42rem;
+  letter-spacing: 0.14em;
+}
+
+.chip.is-particle {
+  font-size: 0.94rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: #b0b0ab;
+}
+
+.chip.is-echo {
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: #aeaea9;
+}
+
+.chip.is-child {
+  font-size: 1.06rem;
+  letter-spacing: 0.18em;
+  color: #9d9d99;
+}
+
+.chip.is-decay {
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  color: #c4c4bf;
+}
+
+.chip.is-emitter {
+  font-size: 1.28rem;
+  letter-spacing: 0.2em;
+  color: #8f8f8a;
+}
+
+@media (max-width: 640px) {
+  .composer {
+    bottom: 0.85rem;
+  }
+}
